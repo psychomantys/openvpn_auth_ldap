@@ -27,9 +27,9 @@ FILE(GLOB OPAL_SOURCES
 
 set(Boost_USE_STATIC_LIBS	ON)
 set(Boost_USE_MULTITHREADED	ON)
-# search for Boost version 1.34
-find_package( Boost COMPONENTS propertytree )
-find_package( Boost COMPONENTS propertytree )
+# search for Boost version 1.49.0
+find_package( Boost "1.49" COMPONENTS propertytree )
+find_package( Ldap ) 
 
 link_directories( ${Boost_LIBRARY_DIRS} )
 include_directories ( ${Boost_INCLUDE_DIRS} )
@@ -45,7 +45,7 @@ if(UNIX)
 		COMMENT	"distribution clean"
 		DEPENDS	clean
 		COMMAND	sh
-		ARGS		-c '(for x in cmake.depends cmake_install.cmake cmake.check_depends CMakeCache.txt cmake.check_cache Makefile gmon.out '*~' CMakeTmp .backups CMakeFiles config.h miniOS \; do find . -iname \"$$x\" \; done ) | xargs -n1 rm -rf'
+		ARGS		-c '(for x in cmake.depends cmake_install.cmake cmake.check_depends CMakeCache.txt cmake.check_cache Makefile gmon.out '*~' CMakeTmp .backups CMakeFiles config.h \; do find . -iname \"$$x\" \; done ) | xargs -n1 rm -rf'
 		TARGET  distclean
 	)
 ENDIF(UNIX)

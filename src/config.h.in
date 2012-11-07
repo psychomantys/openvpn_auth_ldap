@@ -1,0 +1,4 @@
+#define opal_VERSION_MAJOR @opal_VERSION_MAJOR@
+#define opal_VERSION_MINOR @opal_VERSION_MINOR@
+#define opal_VERSION_MINOR @opal_VERSION_MINOR_FIX@
+
