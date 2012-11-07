@@ -21,8 +21,8 @@ INCLUDE_DIRECTORIES(
 )
 
 FILE(GLOB OPAL_SOURCES 
-	"src/kernel/*.cpp"
-	"src/kernel/*.c"
+	"src/*.cpp"
+	"src/*.c"
 )
 
 set(Boost_USE_STATIC_LIBS	ON)
