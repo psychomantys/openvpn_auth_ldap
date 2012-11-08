@@ -28,13 +28,13 @@ FILE(GLOB OPAL_SOURCES
 set(Boost_USE_STATIC_LIBS	ON)
 set(Boost_USE_MULTITHREADED	ON)
 # search for Boost version 1.49.0
-find_package( Boost "1.49" COMPONENTS propertytree )
+find_package( Boost )
 find_package( Ldap ) 
 
 link_directories( ${Boost_LIBRARY_DIRS} )
 include_directories ( ${Boost_INCLUDE_DIRS} )
 
-add_library(opal STATIC
+add_library(opal
 	${OPAL_SOURCES}
 )
 target_link_libraries(opal ${Boost_LIBRARIES})

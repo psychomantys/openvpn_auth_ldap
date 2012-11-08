@@ -1,12 +1,12 @@
 #include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/xml_parser.hpp>
+#include <boost/property_tree/ini_parser.hpp>
 //#include <boost/foreach.hpp>
 #include <string>
 #include <set>
 #include <exception>
 #include <iostream>
 
-struct debug_settings{
+struct settings{
 	std::string file;
 	int level;
 	std::set<std::string> modules;
