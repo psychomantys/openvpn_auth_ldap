@@ -34,7 +34,7 @@ find_package( Ldap )
 link_directories( ${Boost_LIBRARY_DIRS} )
 include_directories ( ${Boost_INCLUDE_DIRS} )
 
-add_library(opal
+add_library(opal SHARED
 	${OPAL_SOURCES}
 )
 target_link_libraries(opal ${Boost_LIBRARIES})

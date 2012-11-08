@@ -35,7 +35,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openvpn_plugin.h"
+#include	<openvpn_plugin.hpp>
 
 /*
  * Our context, where we keep our state.

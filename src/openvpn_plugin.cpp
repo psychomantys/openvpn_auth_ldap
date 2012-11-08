@@ -1,5 +1,5 @@
-#include	<openvpn_plugin.h>
-#include	<main_obj.h>
+#include	<openvpn_plugin.hpp>
+#include	<main_obj.hpp>
 #include	<cstring>
 
 /*
@@ -8,25 +8,20 @@
  * if found or NULL otherwise.
  */
 static const char *
-get_env (const char *name, const char *envp[])
-{
-  if (envp)
-    {
-      int i;
-      const int namelen = strlen (name);
-      for (i = 0; envp[i]; ++i)
-	{
-	  if (!strncmp (envp[i], name, namelen))
-	    {
-	      const char *cp = envp[i] + namelen;
-	      if (*cp == '=')
-		return cp + 1;
-	    }
+get_env (const char *name, const char *envp[]){
+	if (envp){
+		int i;
+		const int namelen = strlen (name);
+		for (i = 0; envp[i]; ++i){
+			if (!strncmp (envp[i], name, namelen)){
+				const char *cp = envp[i] + namelen;
+				if (*cp == '=')
+					return cp + 1;
+			}
+		}
 	}
-    }
-  return NULL;
+	return NULL;
 }
-
 
 OPENVPN_EXPORT openvpn_plugin_handle_t
 openvpn_plugin_open_v1( unsigned int *type_mask, const char *argv[], const char *envp[]){
