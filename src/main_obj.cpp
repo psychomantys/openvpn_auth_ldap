@@ -47,4 +47,3 @@ int Main_obj::auth(const std::string &username, const std::string &password ){
 	return 0;
 }
 
-

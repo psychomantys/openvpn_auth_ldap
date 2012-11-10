@@ -6,6 +6,8 @@ extern "C" {
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
